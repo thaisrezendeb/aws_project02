@@ -38,6 +38,8 @@ dependencies {
 	compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 	compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.613'
 	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.8'
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-dynamodb', version: '1.11.618'
+	compile group: 'com.github.derjust', name: 'spring-data-dynamodb', version: '5.1.0'
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
@@ -50,7 +52,7 @@ test {
 
 bootJar {
 	baseName = 'aws_project02'
-	version = '0.1.0'
+	version = '0.2.0'
 }
 
 task unpack(type: Copy) {
